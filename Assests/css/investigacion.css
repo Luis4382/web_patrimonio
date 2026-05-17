@@ -1,0 +1,275 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS: PÁGINA DE INVESTIGACIÓN (LAYOUT TIPO "ECONEST")
+   ========================================================================== */
+
+/* --- SECCIÓN INTRODUCCIÓN (ESTILO ARCO Y SUPERPOSICIÓN) --- */
+.eco-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 100px 8%;
+    background-color: var(--c-manta);
+    align-items: center;
+}
+
+.eco-images {
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Imagen principal con corte de arco (arch) */
+.img-arch {
+    width: 85%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 250px 250px 20px 20px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Imagen pequeña superpuesta */
+.img-small {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 45%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 10px solid var(--c-manta);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Insignia flotante estilo Terracota */
+.eco-badge {
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    background-color: var(--c-terracota);
+    color: var(--c-blanco);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(225, 164, 81, 0.4);
+    z-index: 2;
+}
+
+.eco-badge .num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.eco-badge .text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* Textos de la sección intro */
+.eco-tag {
+    color: var(--c-terracota);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.eco-text h2 {
+    color: var(--c-pizarra);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.eco-text p {
+    color: var(--c-texto);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.eco-list {
+    list-style: none;
+    padding: 0;
+}
+
+.eco-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--c-pizarra);
+}
+
+/* Viñeta personalizada con el color terracota */
+.eco-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--c-terracota);
+    font-weight: 800;
+}
+
+/* --- FILA DE ESTADÍSTICAS --- */
+.eco-stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: var(--c-manta);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--c-pizarra);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-lbl {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c-terracota);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- ADAPTACIÓN DE LAS TARJETAS (HEADER DIVIDIDO) --- */
+.eco-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+    text-align: left;
+    gap: 40px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.eco-tag-light {
+    color: var(--c-terracota);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.header-right {
+    flex: 1;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    border-left: 3px solid var(--c-terracota);
+    padding-left: 20px;
+}
+
+.modal-trigger {
+    cursor: pointer;
+}
+
+.card-info {
+    min-height: 100px;
+}
+
+/* --- MODAL CARRUSEL (Estilo Institucional) --- */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(58, 65, 74, 0.98); 
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000; opacity: 0; visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active { opacity: 1; visibility: visible; }
+
+.modal-container {
+    background-color: var(--c-manta); 
+    width: 90%; max-width: 1100px; height: 80vh; min-height: 500px;
+    border-radius: 20px; display: flex; overflow: hidden; position: relative; 
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal-overlay.active .modal-container { transform: scale(1); }
+
+.modal-close {
+    position: absolute; top: 20px; right: 25px; font-size: 3em; 
+    color: var(--c-pizarra); cursor: pointer; z-index: 10; line-height: 1;
+}
+
+.modal-close:hover { color: var(--c-terracota); }
+
+.modal-left { 
+    flex: 1.4; background-color: #000; position: relative; 
+    display: flex; align-items: center; justify-content: center; 
+}
+
+.modal-left img { 
+    width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; 
+}
+
+.nav-btn {
+    position: absolute; top: 50%; transform: translateY(-50%); 
+    background-color: rgba(255, 255, 255, 0.95); border: none;
+    width: 55px; height: 55px; border-radius: 50%; font-size: 1.8em; 
+    cursor: pointer; z-index: 5; transition: all 0.3s;
+    color: var(--c-pizarra); box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.nav-btn:hover { background-color: var(--c-terracota); color: #fff; }
+
+.prev-btn { left: 25px; } 
+.next-btn { right: 25px; }
+
+.modal-right { 
+    flex: 1; padding: 60px; display: flex; flex-direction: column; 
+    justify-content: center; background-color: var(--c-manta); 
+}
+
+.modal-right h2 { 
+    color: var(--c-terracota); font-size: 2.2em; margin-bottom: 25px; font-weight: 800; 
+}
+
+.modal-right p { 
+    font-size: 1.15em; color: var(--c-texto); line-height: 1.8; font-weight: 300; 
+}
+
+.slide-counter { 
+    margin-top: 50px; font-weight: 700; color: var(--c-pizarra); font-size: 1.3em; opacity: 0.5; 
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .eco-about { grid-template-columns: 1fr; gap: 40px; }
+    .eco-images { display: flex; justify-content: center; }
+    .img-arch { width: 100%; max-width: 500px; }
+    .eco-section-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .header-right { border-left: none; padding-left: 0; }
+}
+
+@media (max-width: 900px) {
+    .modal-container { flex-direction: column; height: 95vh; }
+    .modal-left { flex: 1; } .modal-right { flex: 0.8; padding: 30px; }
+    .stat-item { width: 45%; margin-bottom: 20px; }
+}

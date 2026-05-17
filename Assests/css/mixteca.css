@@ -1,0 +1,108 @@
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS: PÁGINA MIXTECA POBLANA (INFO)
+   ========================================================================== */
+
+/* --- SECCIÓN DE OBJETIVOS --- */
+.objectives-section {
+    background-color: var(--c-pizarra);
+    padding: 80px 10%;
+    color: var(--c-blanco);
+}
+
+.objectives-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+}
+
+.general-objective {
+    border-left: 4px solid var(--c-terracota);
+    padding-left: 30px;
+}
+
+.general-objective h3, 
+.specific-objectives h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--c-terracota);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.general-objective p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.objectives-list {
+    list-style-type: none;
+    counter-reset: custom-counter;
+}
+
+.objectives-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.objectives-list li::before {
+    counter-increment: custom-counter;
+    content: counter(custom-counter) ".";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--c-terracota);
+}
+
+.objectives-list li strong {
+    color: var(--c-blanco);
+    font-weight: 700;
+}
+
+/* --- VARIANTES DE CUADRÍCULA PARA TARJETAS --- */
+
+/* Grid para 3 comunidades */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1100px;
+}
+
+/* Grid para 2 galerías */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 900px;
+}
+
+/* En resoluciones medianas, las columnas bajan a 2 o 1 */
+@media (max-width: 1024px) {
+    .objectives-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .general-objective {
+        border-left: none;
+        border-top: 4px solid var(--c-terracota);
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-3, .grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+}

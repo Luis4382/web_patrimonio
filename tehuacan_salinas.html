@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cañones y Salinas - Tehuacán</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">    
+    <link rel="shortcut icon" href="Assests/images/cactus.svg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Assests/css/tehuacan_salinas.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="Assests/images/cactus.svg" alt="Icono" style="width: 24px; margin-right: 10px;">
+            VALLE DE TEHUACÁN
+        </div>
+        <nav class="nav-links">
+            <a href="cuicatlan.html#geologia">GEOLOGÍA</a>
+            <a href="cuicatlan.html#hidrologia">HIDROLOGÍA</a>
+            <a href="cuicatlan.html#tradicion">TRADICIÓN SALINERA</a>
+            <a href="index1.html" class="active">VOLVER AL INICIO</a>
+        </nav>
+    </header>
+    
+    <section class="hero"> 
+        <img src="Assests/images/Salina.JPG" alt="Fondo Salinas Zapotitlán" class="hero-bg">
+        <div class="hero-content">
+            <h1>CAÑONES Y<br>SALINAS</h1>
+            <p>Cortes geológicos majestuosos y salinas prehispánicas donde se preservan técnicas milenarias de extracción.</p>
+        </div>
+        <div class="hero-badge">Huellas del tiempo</div>
+    </section>
+    
+    <section class="gallery-section">
+        <h2 class="section-title">HUELLAS DEL TIEMPO</h2>
+        
+        <div class="gallery-grid">
+            
+            <div class="gallery-item modal-trigger">
+                <div class="img-container">
+                    <img src="Assests/images/valle/ruinas.JPG" alt="Salinas de Zapotitlán">
+                </div>
+                <div class="gallery-caption">Salinas Prehispánicas</div>
+                <div class="carousel-data" hidden>
+                    <div class="slide" data-img="https://images.unsplash.com/photo-1589310860868-6d80c6fb0e0a?auto=format&fit=crop&w=800&q=80" data-title="Terrazas de Sal" data-desc="Piletas naturales y artificiales donde la evaporación solar produce una sal rica en minerales, técnica heredada por generaciones."></div>
+                </div>
+            </div>
+
+            <div class="gallery-item modal-trigger">
+                <div class="img-container">
+                    <img src="Assests/images/valle/canones.jpg" alt="Cañones del río">
+                </div>
+                <div class="gallery-caption">Cañones Profundos</div>
+                <div class="carousel-data" hidden>
+                    <div class="slide" data-img="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?auto=format&fit=crop&w=800&q=80" data-title="Cortes Milenarios" data-desc="El paso de los ríos a través del tiempo ha esculpido muros de roca que dejan al descubierto los estratos geológicos de la Tierra."></div>
+                </div>
+            </div>
+
+            <div class="gallery-item modal-trigger">
+                <div class="img-container">
+                    <img src="Assests/images/valle/fosiles.jpg" alt="Fósiles marinos">
+                </div>
+                <div class="gallery-caption">Memoria Marina</div>
+                <div class="carousel-data" hidden>
+                    <div class="slide" data-img="https://images.unsplash.com/photo-1615598656111-c91724458f27?auto=format&fit=crop&w=800&q=80" data-title="Océanos del Pasado" data-desc="Abundantes fósiles de amonitas y conchas marinas que demuestran que esta región árida estuvo cubierta por el mar hace millones de años."></div>
+                </div>
+            </div>
+
+            <div class="gallery-item modal-trigger">
+                <div class="img-container">
+                    <img src="Assests/images/valle/venas.JPG" alt="Ríos de la reserva">
+                </div>
+                <div class="gallery-caption">Venas de Agua</div>
+                <div class="carousel-data" hidden>
+                    <div class="slide" data-img="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=800&q=80" data-title="El Río Santo Domingo" data-desc="Corrientes que atraviesan los cañones, creando microclimas y oasis que permiten la vida en medio de las imponentes formaciones rocosas."></div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-cta">
+            <h2>¡Quieres saber más!</h2>
+            <p>Sumérgete en nuestra plataforma y descubre un espacio diseñado para ti. Encuentra las últimas noticias, documentales exclusivos, y mucho más contenido que da vida a nuestra identidad.</p>
+        </div>
+        
+        <div class="footer-logos">
+            <div class="f-logo"><img src="Assests/images/buap.svg" alt="BUAP"></div>
+            <div class="f-logo"><img src="Assests/images/lab.svg" alt="Laboratorio"></div>
+            <div class="f-logo"><img src="Assests/images/ibero.svg" alt="Iberoamericana"></div>
+            <div class="f-logo"><img src="Assests/images/inecol.svg" alt="INECOL"></div>
+            <div class="f-logo"><img src="Assests/images/secithii.svg" alt="Ciencia y Tecnología"></div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 PATRIMONIO BIOCULTURAL<br><span style="font-weight: 300; font-size: 0.85em;">Mixteca Poblana y el Valle de Tehuacán</span></p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="master-modal">
+        <div class="modal-container">
+            <span class="modal-close" id="close-modal">&times;</span>
+            <div class="modal-left">
+                <button class="nav-btn prev-btn" id="btn-prev">&#10094;</button>
+                <img id="carousel-img" src="" alt="Imagen de Galería">
+                <button class="nav-btn next-btn" id="btn-next">&#10095;</button>
+            </div>
+            <div class="modal-right">
+                <h2 id="carousel-title">Título</h2>
+                <p id="carousel-desc">Descripción</p>
+                <div class="slide-counter" id="slide-counter">1 / 1</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Assests/js/general.js"></script>
+    <script src="Assests/js/galeria_modal.js"></script> 
+</body>
+</html>
